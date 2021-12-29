@@ -1,19 +1,18 @@
-### Introduction</br>
+### Introduction
 
-### TIMERS :
+### Timers :
 
-
-<p>All PLC’s have timer instructions. Timers are output instructions that are internal to the programmable logic controller. Timers provide timed control of the devices that they activate or de-activate. </p>
+<p style="text-align: justify;">All PLC’s have timer instructions. Timers are output instructions that are internal to the programmable logic controller. Timers provide timed control of the devices that they activate or de-activate. </p>
 
 #### Basic functions of timer :
-<ul type=disc>
+<ul type=disc style="text-align: justify;">
 <li>Timers are used to delay an action.</li>
 <li>Timers are used to run an operation for a predetermined period of time.</li>
 <li>Timers are also used to record the total accumulated time of continuous or intermediate events.</li>
 </ul>
 
 #### Timer’s instructions :
-<p>Timers consists of following parts: timer address, preset value, timer base, and accumulated value, as shown in
+<p style="text-align: justify;">Timers consists of following parts: timer address, preset value, timer base, and accumulated value, as shown in
  figure below.
 <center>
 <img src="images/a.gif" style="width:589px; height:112px;"></center>
@@ -25,7 +24,7 @@ done(DN). <br>
 There are 3 types of timers: On- delay timer, Off-delay timer, and retentive timer.</p>
 
 #### On delay timer :
-<ul type=disc>
+<ul type=disc style="text-align: justify;">
 <li>Use this instruction to program a time delay after instructions become true. </li>
 <li>On – delay timers are used when an action is to begin a specified time after the input becomes true. For example, a
 certain step in the manufacturing is to begin 45 seconds after a signal is received from a limit switch. The 45- seconds delay
@@ -33,7 +32,7 @@ certain step in the manufacturing is to begin 45 seconds after a signal is recei
 </ul>
 
 #### Off- delay timer :
-<ul type=disc>
+<ul type=disc style="text-align: justify;">
 <li>Off- delay timer instructions is used to program a time delay to begin after rung input goes false. </li>
 <li> As an example, when an external cooling fan on a motor is provided, the fan has to run all the time the motor is running
  and also for certain time (say 10min) after the motor is turned off. This is a ten minute off- delay timer. The ten-minute
@@ -41,7 +40,7 @@ certain step in the manufacturing is to begin 45 seconds after a signal is recei
 </ul>
 
 #### Retentive timer :
-<ul type=disc>
+<ul type=disc style="text-align: justify;">
 <li>Retentive timer is a timer which retains the accumulated value in case of power loss, change of processor mode or rung
 state going from true to false (rung state transition).</li>
 <li>Retentive timer can be used to track the running time of a motor for its maintenance purpose. Each time the motor is
@@ -50,14 +49,14 @@ increase from there. This timer can be reset by using a reset instruction. </li>
 </ul>
 
 ##### Reset :
-<ul type=disc>
+<ul type=disc style="text-align: justify;">
 <li>This instruction is used to reset the accumulated value of counter or timer. </li>
 <li>It is used to reset a retentive timer’s accumulated value to zero. </li>
 </ul>
 
 ##### A typical timer element :
-<p>A timer element is made up of three 16 bit words:</p>
-<ul type=disc>
+<p style="text-align: justify;">A timer element is made up of three 16 bit words:</p>
+<ul type=disc style="text-align: justify;">
 <li>Word 0 &#8594; 3 status bits (EN, TT, DN). </li>
 <li>Word 1 &#8594; Preset values. </li>
 <li>Word 2 &#8594; Accumulated value. </li>
@@ -68,7 +67,7 @@ increase from there. This timer can be reset by using a reset instruction. </li>
 
 ##### How do we address a timer?
 Addressing a timer is as follows: <br>
-<ol type="1">
+<ol type="1" style="text-align: justify;">
 <li>The address format in order to address the timer element is T4:3 <br>
           Where, T = T identifies this as a timer file. <br>
                        4 = represents the default timer file 4. <br>
@@ -95,7 +94,7 @@ Addressing a timer is as follows: <br>
 </ol>
 
 &#8658; The status bits of the timer can be addressed in the following way:
-<ul type=disc>
+<ul type=disc style="text-align: justify;">
 <li>Word zero, bit 13, is the done bit. It is identified as DN.
   This bit is set when the timer’s accumulated value is
    equal to the timer’s preset value. It can be addressed as
@@ -116,7 +115,7 @@ The above figure is used to explain the on-delay timer instruction.<br>
 Here, T4:2 represents timer file 4, timer element 2, preset value is 50, accumulated value is 0 and timer base is 1 second.
 Input module is in slot 1 and output module is in slot 2. <br>
 
-<ul type=disc>
+<ul type=disc style="text-align: justify;">
 <li>As long as the instruction I:1/0 is true, the on-delay timer T4:2 will increment every one second toward its preset value
  of 50 seconds. The accumulated value displays the current number of seconds that passed. When the accumulated value
  is equal to the preset value, the timer’s done bit will get energized or set. So when the timer’s done bit gets energized, the
@@ -142,7 +141,7 @@ instruction, no matter the relationship between the preset value and accumulated
 The above figure is used to explain the off-delay timer instruction. Here, T4:2 represents timer file 4, timer element 2,
 preset value is 200, accumulated value is 0 and timer base is 1 second. Input module is in slot 1 and output module is in
  slot 2. <br>
-<ul type=disc>
+<ul type=disc style="text-align: justify;">
 <li>As an example, consider an external cooling fan on a motor which has to run all the time when the motor is running and
  also for 200 seconds after the motor is turned off. For this purpose, we use 200- second off-delay timer. The 200-second
  timing cycle begins when the motor is turned off. </li>
@@ -167,7 +166,7 @@ Note: The timer done bit, bit 13, is set when the rung 000 becomes true. It will
 </ul>
 
 #### The retentive timer instruction :
-<p>Retentive timer instruction is used when we want to retain the accumulated value through power loss, processor mode
+<p style="text-align: justify;">Retentive timer instruction is used when we want to retain the accumulated value through power loss, processor mode
  change, or change in the rung state from true to false. The retentive timer instruction will measure the cumulative time
  period for which its rung is true. One of the example of retentive timer is that, it can be used to track the running time of a
 motor for maintenance purpose. The retentive timer is used to track the accumulated time the motor has run. In our example
@@ -178,12 +177,12 @@ maintenance remainder pilot light will be lit. A retentive timer is used in this
 <center>
 <img src="images/e.gif" style="width:577px; height:379px;"></center>
 <center>fig(e)</center><br>
-<p>Here, T4:2 represents timer file 4, timer element 2, preset value is 3600, accumulated value is 0 and timer base is 1
+<p style="text-align: justify;">Here, T4:2 represents timer file 4, timer element 2, preset value is 3600, accumulated value is 0 and timer base is 1
  second. Input module is in slot 1 and output module is in slot 2. <br>
 The retentive timer on, RTO instruction, behaves similar to the timer-on delay instruction, with exception that when the RTO
 instruction goes false, it will retain its accumulated value. <br>
 The retentive timer will retain its accumulated value during the following conditions: </p>
-<ul type=disc>
+<ul type=disc style="text-align: justify;">
 <li>When its rung goes false.</li>
 <li>When processor losses power. But, the battery for memory back up must be in good condition. </li>
 <li>When the processor faults. </li>
@@ -191,7 +190,7 @@ The retentive timer will retain its accumulated value during the following condi
 </ul>
 
 ##### Associated status bit :
-<p>The timer done bit, bit 13, is set when the accumulated value is equal to the preset value. For our application, the done
+<p style="text-align: justify;">The timer done bit, bit 13, is set when the accumulated value is equal to the preset value. For our application, the done
  bit and output O:2/0 could control the maintenance reminder pilot light. <br>
 Timer timing bit(TT), bit 14, is on rung 002. This bit is set anytime the rung conditions are true and the timer times. The timer
 times whenever the rung is true and the accumulated value is less than the preset value. When the done bit is set, the
@@ -204,10 +203,10 @@ the timer instruction is considered enabled. The enable bit is true when the tim
  the transition from the timer-timing bit to the timer done bit.</p>
 
 ##### The reset instruction :
-<p>In order to reset the accumulated value of retentive timer, a reset instruction is used. The address of the reset instruction
+<p style="text-align: justify;">In order to reset the accumulated value of retentive timer, a reset instruction is used. The address of the reset instruction
  must match the address of the timer that is to be reset. Only one address is allowed per reset instruction. In rung 004,
  I:1/1 instruction is used to reset the timer T4:2. This signal comes from a momentary normally open push button field
 device, connected to input screw terminal 1. Pressing this push button will reset the RTO’s accumulated value back to 0. </p>
 
-<p><strong>NOTE</strong>: Retentive timer off instruction behaves similar to the timer-off delay with the exception that when the
+<p style="text-align: justify;"><strong>NOTE</strong>: Retentive timer off instruction behaves similar to the timer-off delay with the exception that when the
  instruction goes from false to true, it will retain , or remember, its accumulated value.</p>

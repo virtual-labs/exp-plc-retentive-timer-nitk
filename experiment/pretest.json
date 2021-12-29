@@ -28,8 +28,7 @@
       "explanations": {
         "a": "",
         "b": "",
-        "c": "",
-        "d": ""
+        "c": ""
       },
       "correctAnswer": "a",
       "difficulty": ""
@@ -44,14 +43,13 @@
       "explanations": {
         "a": "",
         "b": "",
-        "c": "",
-        "d": ""
+        "c": ""
       },
       "correctAnswer": "a",
       "difficulty": ""
     },
     {
-      "question": "The retentive timer will retain its accumulated value during the following conditions:.",
+      "question": "The retentive timer will retain its accumulated value during the following conditions:",
       "answers": {
         "a": "When its rung goes false",
         "b": "When processor losses power",
