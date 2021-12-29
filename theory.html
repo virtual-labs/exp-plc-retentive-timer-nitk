@@ -1,0 +1,639 @@
+<!DOCTYPE html><html lang="en"><head>
+      <!--Google Tag Manager-->
+      <script class="gtm">
+        var dataLayer = [{
+        'labName': 'Virtual Lab',
+        'discipline': 'Test',
+        'college': 'NITK',
+        'phase': 'Testing',
+        'expName': 'PLC RETENTIVE TIMER ON INSTRUCTION',
+        'expShortName': 'plc-retentive-timer'
+        }];
+    
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5NMQ9NQ');
+      </script>
+      <!--End Google Tag Manager-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    
+    	<meta name="experiment-short-name" content="plc-retentive-timer">
+    	<meta name="developer-institute" content="NITK">
+    	<meta name="learning-unit" content="PLC RETENTIVE TIMER ON INSTRUCTION">
+    	<meta name="task-name" content="Theory">
+    
+    <!-- For iPhone -->
+    <meta name="msapplication-TileColor" content="#4076e0">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#4076e0">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#4076e0">
+    <title>Virtual Labs</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.ico">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" integrity="sha512-Oy18vBnbSJkXTndr2n6lDMO5NN31UljR8e/ICzVPrGpSud4Gkckb8yUpqhKuUNoE+o9gAb4O/rAxxw1ojyUVzg==" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Raleway&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/github-markdown.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.6-b/css/style.min.css">
+    <link rel="stylesheet" href="./assets/css/vlabs-style.css">
+    
+    <script src="./assets/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <style>
+      h1 {
+      font-size: 1.8rem;
+      }
+      h2 {
+      font-size: 1.4rem;
+      }
+      h3 {
+      font-size: 1.2rem;
+      }
+
+      h2, h3 {
+      font-weight: 800;
+      }
+    </style>
+  </head>
+  <body class="p-0 container-fluid vlabs-page d-flex flex-column justify-content-between">
+      <!--Google Tag Manager (noscript)-->
+      <noscript class="gtm">
+        <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-5NMQ9NQ" style="display:none;visibility:hidden" width="0">
+        </iframe>
+      </noscript>
+      <!--End Google Tag Manager (noscript)-->
+  
+      <header class="vlabs-header sticky-top bg-white">
+        <nav class="p-0 navbar navbar-light d-flex align-items-stretch">
+          
+          <button class="navbar-toggler px-4" type="button" onclick="toggle()">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="d-flex justify-content-center">        
+            <a href="https://vlab.co.in" class="navbar-brand">
+              <img src="./assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+            </a>
+          </div>
+          
+          <div id="headerNavbar" class="d-none border-top flex-grow-1 d-lg-flex align-items-center">
+            <ul class="navbar-nav ml-auto text-center d-flex flex-md-row">
+              <li class="nav-item px-2 m-1">
+                <a href="https://vlab.co.in">HOME</a>
+              </li>
+              <li class="nav-item px-2 m-1">
+                <a href="https://vlab.co.in/participating-institutes">PARTNERS</a>
+              </li>
+              <li class="nav-item px-2 m-1">
+                <a href="https://vlab.co.in/contact-us">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <div class="container-fluid flex-fill d-flex flex-column vlabs-page-main">
+        <div class="row d-flex justify-content-between">
+          <div class="flex-column">
+		  <div class="row py-4 px-4 breadcrumbs">
+		  	<div class="title is-4 tools">Tools</div>
+		  	<span class="mx-2">
+		  		<i aria-hidden="true" class="fa fa-angle-right"></i>
+		  	</span>
+		  	<a href="performance-report.html" target="_blank">
+		  		<button class="v-button">Performance Tool</button>
+		  	</a>
+		  </div>
+	  </div>
+          <div class="flex-column">
+            <div id="plugin-bug-report"></div>
+            <div id="plugin-rating"></div>
+          </div>
+        </div>
+        <div class="row flex-grow-1 d-flex flex-nowrap flex-column flex-lg-row">
+          <div class="modal fade popupmenu" id="popupMenu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">
+                              <a href="https://vlab.co.in" class="navbar-brand">
+                                  <img src="./assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+                              </a>
+                          </h5>
+                          <button type="button" class="btn-close align-self-center" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body nav-menu">
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="index.html" class="p-2 ">
+                                      Aim
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="theory.html" class="p-2  current-item ">
+                                      Theory
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="procedure.html" class="p-2 ">
+                                      Procedure
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="pretest.html" class="p-2 ">
+                                      Self Evaluation
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="simulation.html" class="p-2 ">
+                                      Simulation
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="assignment.html" class="p-2 ">
+                                      Assignment
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="posttest.html" class="p-2 ">
+                                      Quiz
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="videos.html" class="p-2 ">
+                                      Videos
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="references.html" class="p-2 ">
+                                      References
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="feedback.html" class="p-2 ">
+                                      Feedback
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="nav flex-column sidebar nav-menu flex-shrink-0 px-lg-4 align-items-center align-items-lg-start hidden d-none d-lg-flex" id="menu">
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="index.html" class="p-2 ">
+                        Aim
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="theory.html" class="p-2  current-item ">
+                        Theory
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="procedure.html" class="p-2 ">
+                        Procedure
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="pretest.html" class="p-2 ">
+                        Self Evaluation
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="simulation.html" class="p-2 ">
+                        Simulation
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="assignment.html" class="p-2 ">
+                        Assignment
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="posttest.html" class="p-2 ">
+                        Quiz
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="videos.html" class="p-2 ">
+                        Videos
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="references.html" class="p-2 ">
+                        References
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="feedback.html" class="p-2 ">
+                        Feedback
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+          </div>          <div class="vlabs-page-content px-5 pb-4 flex-grow-1 markdown-body">
+            <div class="text-center fix-spacing">
+              <h2 id="plc-retentive-timer-on-instruction">PLC Retentive Timer On Instruction</h2>
+          
+            </div>
+              <h3 id="introduction">Introduction</h3>
+          <h3 id="timers-">Timers :</h3>
+          <p style="text-align: justify;">All PLC’s have timer instructions. Timers are output instructions that are internal to the programmable logic controller. Timers provide timed control of the devices that they activate or de-activate. </p>
+          
+          <h4 id="basic-functions-of-timer-">Basic functions of timer :</h4>
+          <ul type="disc" style="text-align: justify;">
+          <li>Timers are used to delay an action.</li>
+          <li>Timers are used to run an operation for a predetermined period of time.</li>
+          <li>Timers are also used to record the total accumulated time of continuous or intermediate events.</li>
+          </ul>
+          
+          <h4 id="timers-instructions-">Timer’s instructions :</h4>
+          <p style="text-align: justify;">Timers consists of following parts: timer address, preset value, timer base, and accumulated value, as shown in
+           figure below.
+          </p><center>
+          <img src="images/a.gif" style="width:589px; height:112px;"></center>
+          <center>fig(a)</center><br>
+          In the above figure , term instruction name is, timer on delay ( TON ), timer base is 1.0 seconds, timer address is T4:0,
+          accumulated value of zero(0) and a preset value of 200.<br>
+          Each timer instruction has three very useful status bits. These bits are timer enable (E N), timer timing (TT), and timer
+          done(DN). <br>
+          There are 3 types of timers: On- delay timer, Off-delay timer, and retentive timer.<p></p>
+          
+          <h4 id="on-delay-timer-">On delay timer :</h4>
+          <ul type="disc" style="text-align: justify;">
+          <li>Use this instruction to program a time delay after instructions become true. </li>
+          <li>On – delay timers are used when an action is to begin a specified time after the input becomes true. For example, a
+          certain step in the manufacturing is to begin 45 seconds after a signal is received from a limit switch. The 45- seconds delay
+           is the on-delay timers preset value. </li>
+          </ul>
+          
+          <h4 id="off--delay-timer-">Off- delay timer :</h4>
+          <ul type="disc" style="text-align: justify;">
+          <li>Off- delay timer instructions is used to program a time delay to begin after rung input goes false. </li>
+          <li> As an example, when an external cooling fan on a motor is provided, the fan has to run all the time the motor is running
+           and also for certain time (say 10min) after the motor is turned off. This is a ten minute off- delay timer. The ten-minute
+           timing period begins as soon as the motor is turned off. </li>
+          </ul>
+          
+          <h4 id="retentive-timer-">Retentive timer :</h4>
+          <ul type="disc" style="text-align: justify;">
+          <li>Retentive timer is a timer which retains the accumulated value in case of power loss, change of processor mode or rung
+          state going from true to false (rung state transition).</li>
+          <li>Retentive timer can be used to track the running time of a motor for its maintenance purpose. Each time the motor is
+          turned off, the timer will remember the motor’s elapsed running time. The next time the motor is turned on, the time will
+          increase from there. This timer can be reset by using a reset instruction. </li>
+          </ul>
+          
+          <h5 id="reset-">Reset :</h5>
+          <ul type="disc" style="text-align: justify;">
+          <li>This instruction is used to reset the accumulated value of counter or timer. </li>
+          <li>It is used to reset a retentive timer’s accumulated value to zero. </li>
+          </ul>
+          
+          <h5 id="a-typical-timer-element-">A typical timer element :</h5>
+          <p style="text-align: justify;">A timer element is made up of three 16 bit words:</p>
+          <ul type="disc" style="text-align: justify;">
+          <li>Word 0 → 3 status bits (EN, TT, DN). </li>
+          <li>Word 1 → Preset values. </li>
+          <li>Word 2 → Accumulated value. </li>
+          </ul>
+          <center>
+          <img src="images/b.gif" style="width:454px; height:96px;"></center>
+          <center>fig(b)</center>
+          
+          <h5 id="how-do-we-address-a-timer">How do we address a timer?</h5>
+          <p>Addressing a timer is as follows: <br></p>
+          <ol type="1" style="text-align: justify;">
+          <li>The address format in order to address the timer element is T4:3 <br>
+                    Where, T = T identifies this as a timer file. <br>
+                                 4 = represents the default timer file 4. <br>
+                               <strong> Note</strong>: SLC timer can be assigned any unused file from 9
+                                          to 255. <br>
+                                :3 = This is timer three in file 4. There are 256 timers
+                                        available in each file. Timers 0 through 255 are
+                                        available . <br><br>
+          </li>
+          <li>Preset value of the timer can be addressed in the following way:T4:3.PRE <br>
+                     Where, T= identifies this as a timer file. <br>
+                                  4= represents the default timer file 4.<br>
+                                 :3= timer 3 in file 4. <br>
+                                 . = this point is the word delimiter. It separates the timer number, called the structure, from the subelements.
+                                      Here the subelement is PRE, for preset value.<br><br>
+          </li>
+          <li>Accumulated value of the timer can be addressed as shown below:T4:3.ACC <br>
+                      Where, T= identifies this as a timer file. <br>
+                                   4= represents the default timer file 4.<br>
+                                  :3= timer 3 in file 4. <br>
+                                  . = this point is the word delimiter. It separates the timer number, called the structure, from the subelements.
+                                      Here the subelement is ACC, for accumulated value. <br><br>
+          </li>
+          </ol>
+          
+          <p>⇒ The status bits of the timer can be addressed in the following way:</p>
+          <ul type="disc" style="text-align: justify;">
+          <li>Word zero, bit 13, is the done bit. It is identified as DN.
+            This bit is set when the timer’s accumulated value is
+             equal to the timer’s preset value. It can be addressed as
+             T4:3/DN.        </li>
+          <li>Word zero, bit 14, is the timer timing bit. It is identified
+             as TT. TT is set when the timer is timing. It is
+             addressed as T4:3/TT. </li>
+          <li> Word zero, bit 15, is the timer enable bit. It is identified
+             as EN. EN bit is set whenever the timer is enabled. It is
+               addressed as T4:3/EN. </li>
+          </ul>
+          
+          <h4 id="the-on-delay-timer-instruction-">The on-delay timer instruction :</h4>
+          <center>
+          <img src="images/c.gif" style="width:471px; height:301px;"></center>
+          <center>fig(c)</center><br>
+          The above figure is used to explain the on-delay timer instruction.<br>
+          Here, T4:2 represents timer file 4, timer element 2, preset value is 50, accumulated value is 0 and timer base is 1 second.
+          Input module is in slot 1 and output module is in slot 2. <br>
+          
+          <ul type="disc" style="text-align: justify;">
+          <li>As long as the instruction I:1/0 is true, the on-delay timer T4:2 will increment every one second toward its preset value
+           of 50 seconds. The accumulated value displays the current number of seconds that passed. When the accumulated value
+           is equal to the preset value, the timer’s done bit will get energized or set. So when the timer’s done bit gets energized, the
+           rung 003, instruction T4:3/DN becomes true and logical continuity is passed and the output O:2/2 gets energized. </li>
+          
+          <li>As long as the I:1/4 is true, the timer instruction is enabled. Hence, rung 000 becomes true and logical continuity is
+          passed and the output O:2/0 is energized. <br>
+          Note: An on-delay timer is not retentive in nature.so any loss of continuity to the timer instruction on rung 000 will cause
+          the timer to reset itself to an accumulated value of 0. </li>
+          <li>When the timer is timing i.e rung 000 is true and accumulated value is less than preset value, timer timing bit(TT) is true.
+           So the rung 002 becomes true i.e instruction T4:2/TT is true and output instruction O:2/1 is energized.<br>
+          Note: As long as the rung 000 is true i.e instruction I:1/0 is true, the timer instruction is considered enabled. The enable bit
+          will be true when the timer timing bit is true. Timer enable bit will be set through the transition from the timer-timing bit to the
+           timer-done bit. Timer enable bit is set as long as there is logical continuity through all input instructions to the timer
+          instruction, no matter the relationship between the preset value and accumulated value. When the rung goes false, the
+           enable bit is reset.  </li>
+          </ul>
+          
+          <h4 id="the-off-delay-timer-instruction-">The off-delay timer instruction :</h4>
+          <center>
+          <img src="images/d.gif" style="width:468px; height:369px;"></center>
+          <center>fig(d)</center><br>
+          The above figure is used to explain the off-delay timer instruction. Here, T4:2 represents timer file 4, timer element 2,
+          preset value is 200, accumulated value is 0 and timer base is 1 second. Input module is in slot 1 and output module is in
+           slot 2. <br>
+          <ul type="disc" style="text-align: justify;">
+          <li>As an example, consider an external cooling fan on a motor which has to run all the time when the motor is running and
+           also for 200 seconds after the motor is turned off. For this purpose, we use 200- second off-delay timer. The 200-second
+           timing cycle begins when the motor is turned off. </li>
+          <li> When the instruction I:1/0 is true, the motor is turned on i.e instruction O:2/0 becomes true. In other words, rung 000
+          becomes true. When the instruction I:1/0 is true, rung 001 becomes true, which will make the off-delay timer T4:2 enable.
+           So as long as the instruction I:1/0 is true, the timer enable bit, EN, is true and hence, rung 002 become true, which inturn
+          makes the output instruction O:2/1 true. The done bit is set as long as the rung 001 is true i.e the done bit is set when the
+           enable bit is set. So the rung 004 is true. Hence, the external cooling fan is energized i.e instruction O:2/3 is true. So at
+          this point, both motor and external cooling fan are energized. </li>
+          <li>When the motor is turned off, i.e the instruction I:1/0 becomes false, the output instruction O:2/0( motor) becomes false
+          and motor is turned off. When rung 001 transitions from true to false, the TOF( off-delay timer) instruction begins timing.
+          The done bit and the external cooling fan( O:2/3) will still remains on, or true, for the preset value of 200 seconds. The time
+          period between the point when the rung becomes false and the point when the 200 seconds preset time expires for T4:2 is
+           called delay after the input goes false, or the off-delay. The timers done bit and its associated output stay true until the
+           off-delay of 200- seconds expires. The time expires when the accumulated value reaches the preset value. When the input
+          instruction I:1/0 goes from true to false, the timer enable bit (EN) is reset and timer timing bit(TT) is set. The timer will start
+           timing at this point. The timer timing bit(EN) becomes true whenever the rung transitions from true to false and the
+          accumulated value is less than the preset value.<br>
+          Note: The timer done bit, bit 13, is set when the rung 000 becomes true. It will remain set through the true to false transition
+           and until the accumulated value is equal to the preset value. This bit is commonly used to control the other logic when an
+           output needs to be turned-on or turned-off after its rung has been off for the preset time interval. </li>
+          </ul>
+          
+          <h4 id="the-retentive-timer-instruction-">The retentive timer instruction :</h4>
+          <p style="text-align: justify;">Retentive timer instruction is used when we want to retain the accumulated value through power loss, processor mode
+           change, or change in the rung state from true to false. The retentive timer instruction will measure the cumulative time
+           period for which its rung is true. One of the example of retentive timer is that, it can be used to track the running time of a
+          motor for maintenance purpose. The retentive timer is used to track the accumulated time the motor has run. In our example
+          , our motor needs maintenance after 3600 seconds or, one hour of running time. Each time the motor is turned off, the timer
+          needs to remember the motors total elapsed running time. The next time the motor is turned on, the timer will increase the
+           accumulated running time from where it is left off. When the total accumulated motor running time has been reached, a
+          maintenance remainder pilot light will be lit. A retentive timer is used in this application.</p>
+          <center>
+          <img src="images/e.gif" style="width:577px; height:379px;"></center>
+          <center>fig(e)</center><br>
+          <p style="text-align: justify;">Here, T4:2 represents timer file 4, timer element 2, preset value is 3600, accumulated value is 0 and timer base is 1
+           second. Input module is in slot 1 and output module is in slot 2. <br>
+          The retentive timer on, RTO instruction, behaves similar to the timer-on delay instruction, with exception that when the RTO
+          instruction goes false, it will retain its accumulated value. <br>
+          The retentive timer will retain its accumulated value during the following conditions: </p>
+          <ul type="disc" style="text-align: justify;">
+          <li>When its rung goes false.</li>
+          <li>When processor losses power. But, the battery for memory back up must be in good condition. </li>
+          <li>When the processor faults. </li>
+          <li>When the processor operating mode is changed from remote run or remote test to remote program mode.</li>
+          </ul>
+          
+          <h5 id="associated-status-bit-">Associated status bit :</h5>
+          <p style="text-align: justify;">The timer done bit, bit 13, is set when the accumulated value is equal to the preset value. For our application, the done
+           bit and output O:2/0 could control the maintenance reminder pilot light. <br>
+          Timer timing bit(TT), bit 14, is on rung 002. This bit is set anytime the rung conditions are true and the timer times. The timer
+          times whenever the rung is true and the accumulated value is less than the preset value. When the done bit is set, the
+          timer timing bit resets. So in our example, the timer timing bit will be set or true, whenever input I:1/0 is true and as long as
+           the accumulated value is less than the preset value of 3600 seconds. Output O:2/1 will be on or true when the timer is
+           timing between 0 second and 300 seconds. As the done bit is set and O:2/0 turns on, the timer timing bit goes false and
+           O:2/1 turns off. <br>
+          The timer enable bit, 15, is set or true , anytime the timer instruction rung 000 is true. As long as the instruction I:1/0 is true,
+          the timer instruction is considered enabled. The enable bit is true when the timer-timing bit is true and it will stay set through
+           the transition from the timer-timing bit to the timer done bit.</p>
+          
+          <h5 id="the-reset-instruction-">The reset instruction :</h5>
+          <p style="text-align: justify;">In order to reset the accumulated value of retentive timer, a reset instruction is used. The address of the reset instruction
+           must match the address of the timer that is to be reset. Only one address is allowed per reset instruction. In rung 004,
+           I:1/1 instruction is used to reset the timer T4:2. This signal comes from a momentary normally open push button field
+          device, connected to input screw terminal 1. Pressing this push button will reset the RTO’s accumulated value back to 0. </p>
+          
+          <p style="text-align: justify;"><strong>NOTE</strong>: Retentive timer off instruction behaves similar to the timer-off delay with the exception that when the
+           instruction goes from false to true, it will retain , or remember, its accumulated value.</p>
+          
+          </div>
+        </div>
+      </div>
+      <footer class="text-light pt-2 vlabs-footer d-flex flex-column">
+        <div class="row px-5 mx-0">
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Community Links</span>
+            <a href="https://www.sakshat.ac.in/" class="text-light">Sakshat Portal</a>
+            <a href="http://outreach.vlabs.ac.in/" class="text-light">Outreach Portal</a>
+            <a href="https://vlab.co.in/faq" class="text-light">FAQ: Virtual Labs</a>
+          </div>
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Contact Us</span>
+            <span> Phone: General Information: 011-26582050 </span>
+            <span> Email: support@vlabs.ac.in </span>
+          </div>
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Follow Us</span>
+            <div class="social-links">
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #55acee;" href="https://twitter.com/TheVirtualLabs">
+      	  <i class="fa fa-twitter"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #3b5998;" href="https://www.facebook.com/Virtual-Labs-IIT-Delhi-301510159983871/">
+      	  <i class="fa fa-facebook"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #e52d27;" href="https://www.youtube.com/watch?v=asxRaOgk6a0">
+      	  <i class="fa fa-youtube"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #2867B2;" href="https://in.linkedin.com/in/virtual-labs-008ba9136">
+      	  <i class="fa fa-linkedin"></i>
+      	</a>
+            </div>
+          </div>
+        </div>
+        <div class="m-0 py-2 text-center" style="font-family: &quot;Open Sans&quot;, sans-serif; background: #212121;">
+          <a class="text-primary font-weight-bold" href="https://www.gnu.org/licenses/agpl-3.0.en.html"> AGPL 3.0 </a>
+          &nbsp;&amp;&nbsp;
+          <a class="text-primary font-weight-bold" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> Creative Commons (CC BY-NC-SA 4.0) </a>
+        </div>
+      </footer>
+
+      <script src="./assets/js/toggleSidebar.js"></script>
+      
+  
+
+<script type="module" src="https://vjspranav.github.io/vleads-bug-report/client/app.js"></script></body></html>

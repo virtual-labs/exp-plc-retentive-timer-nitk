@@ -1,0 +1,114 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Timers are output instructions that are internal to the programmable logic controller.",
+      "answers": {
+        "a": "True",
+        "b": "False"
+      },
+      "explanations": {
+        "a": "",
+        "b": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": ""
+    },
+    {
+      "question": "Timers are ___________ ",
+      "answers": {
+        "a": "Used to delay an action",
+        "b": "Used to run an operation for a predetermined period of time",
+        "c": "Used to record the total accumulated time of continuous or inter-mediate events",
+        "d": "All of the above"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": ""
+    },
+    {
+      "question": "The timer 3, in default timer file 4, can be addressed as ________ .",
+      "answers": {
+        "a": "T3:4",
+        "b": "T3/4",
+        "c": "T4:3",
+        "d": "T4/3"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": ""
+    },
+    {
+      "question": "In word zero, of timer element, bit 13, is the _______",
+      "answers": {
+        "a": "Timer-timing bit",
+        "b": "Timer-enable bit",
+        "c": "Timer-done bit"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": ""
+    },
+    {
+      "question": "In timer file 12, timer 5's timer timing bit is addressed as _______ .",
+      "answers": {
+        "a": "T5:12/TT",
+        "b": "T12:5/TT",
+        "c": "T5:12.TT",
+        "d": "T12:5.TT"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": ""
+    },
+    {
+      "question": "The retentive timer on , RTO instruction, behaves similar to the timer on delay instruction, with exception that when the RTO instruction goes false it will retain its accumulated value.",
+      "answers": {
+        "a": "True",
+        "b": "False"
+      },
+      "explanations": {
+        "a": "",
+        "b": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": ""
+    },
+    {
+      "question": "<u>Statement 1</u>: In order to reset the accumulated value of retentive timer, a reset instruction is used.<br><u>Statement 2</u>: The address of the reset instruction must match the address of the timer that is to be rese.",
+      "answers": {
+        "a": "Statement 1 is true and statement 2 is false",
+        "b": "Both statement 1 and statement 2 are false",
+        "c": "Statement 1 is false and statement 2 is true",
+        "d": "Both statement 1 and statement 2 are true"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": ""
+    }
+  ]
+}

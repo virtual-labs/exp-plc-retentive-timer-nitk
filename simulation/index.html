@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SOLVE</title>
+<link rel="stylesheet" href="css/rton.css" />
+<script type="text/javascript" src="js/rton.js"></script>
+<script>
+var simsubscreennum=0;
+var temp=0;
+</script>
+</head>
+
+<body style="margin:0; font-family:verdana; color:#ffffff;">
+<div id="simscreen">
+<div id="title"><h3>PLC RETENTIVE TIMER-ON INSTRUCTION </h3></div>
+
+<div class="simsubscreen">
+	<img style="position:absolute; left:10px; top:90px;" src="images/i1.png" />
+	<img style="position:absolute; left:375px; top:15px;" src="images/counter.png" />
+	<img style="position:absolute; left:3px; top:180px;" src="images/control.png" />
+	<img style="position:absolute; left:35px; top:240px;" src="images/circuit.png" />
+	<img id="mainOn" style="position:absolute; left:53px; top:239.5px; visibility:hidden; cursor:pointer;" onclick="stop()" src="images/switchOn.png" />
+	<img id="mainOff" style="position:absolute; left:53px; top:227.5px; cursor:pointer;" onclick="start()" src="images/switchOff.png" />
+	
+	<img style="position:absolute; left:50px; top:270px;" src="images/reset.png" />
+	<button id="reset" style="position:absolute; left:58px; top:274px; background-image: linear-gradient(to right, #FFEB99, #FED430, #E1B400, #C79F00, #a98700); width:22px; height:20px; border-radius:10px; cursor:pointer; border-color:darkgrey;" onmousedown="reset()" onmouseup="resetDone()"></button>
+	
+	<img style="position:absolute; left:160px; top:270px; width:175opx; height:150px;" src="images/motor.png" />
+	<img id="arrow" style="position:absolute; left:182.5px; top:347px; visibility:hidden;" src="images/arrow3.png" />
+	<img style="position:absolute; left:170.5px; top:352.5px; height:15px;" src="images/rotar.png" />
+	
+	<img id="off1" style="position:absolute; left:721px; top:94px; width:22.5px; height:22.5px;" src="images/off.png" />
+	<img id="on1" style="position:absolute; left:721px; top:94px; width:22.5px; height:22.5px; visibility:hidden;" src="images/on.png" />
+	<img id="off2" style="position:absolute; left:723px; top:135px; width:22.5px; height:22.5px; " src="images/off.png" />
+	<img id="on2" style="position:absolute; left:723px; top:135px; width:22.5px; height:22.5px; visibility:hidden;" src="images/on.png" />
+	<img id="off3" style="position:absolute; left:727.5px; top:177.5px; width:22.5px; height:22.5px;" src="images/off.png" />
+	<img id="on3" style="position:absolute; left:727.5px; top:177.5px; width:22.5px; height:22.5px; visibility:hidden;" src="images/on.png" />
+	<img id="off4" style="position:absolute; left:727px; top:226px; width:22.5px; height:22.5px; " src="images/off.png" />
+	<img id="on4" style="position:absolute; left:727px; top:226px; width:22.5px; height:22.5px; visibility:hidden;" src="images/on.png" />
+	<img id="off5" style="position:absolute; left:729px; top:275px; width:22.5px; height:22.5px; " src="images/off.png" />
+	<img id="on5" style="position:absolute; left:729px; top:275px; width:22.5px; height:22.5px; visibility:hidden;" src="images/on.png" />
+	<img id="off6" style="position:absolute; left:726px; top:311px; width:22.5px; height:22.5px;" src="images/off.png" />
+	<img id="on6" style="position:absolute; left:726px; top:311px; width:22.5px; height:22.5px; " src="images/on.png" />
+	<img id="off7" style="position:absolute; left:726.5px; top:367.5px; width:22.5px; height:22.5px;" src="images/off.png" />
+	<img id="on7" style="position:absolute; left:726.5px; top:367.5px; width:22.5px; height:22.5px; visibility:hidden;" src="images/on.png" />
+	<img id="off8" style="position:absolute; left:726px; top:426.5px; width:22.5px; height:22.5px;" src="images/off.png" />
+	<img id="on8" style="position:absolute; left:726px; top:426.5px; width:22.5px; height:22.5px; visibility:hidden;" src="images/on.png" />
+	
+	<div id="bit1" style="position:absolute; left:430px; top:75px; padding:2px; background-color:red; color:black; font-size:11px; font-weight:bold;">I:1/0</div>
+	<div id="bit2" style="position:absolute; left:423px; top:157.5px; padding:2px; background-color:red; color:black; font-size:11px; font-weight:bold;">T4:0/EN</div>
+	<div id="bit3" style="position:absolute; left:423px; top:207.5px; padding:2px; background-color:red; color:black; font-size:11px; font-weight:bold;">T4:2/TT</div>
+	<div id="bit4" style="position:absolute; left:423px; top:292.5px; padding:2px; background-color:#009900; color:black; font-size:11px; font-weight:bold;">T4:0/TT</div>
+	<div id="bit5" style="position:absolute; left:420px; top:347px; padding:2px; background-color:red; color:black; font-size:11px; font-weight:bold;">T4:2/DN</div>
+	<div id="bit6" style="position:absolute; left:430px; top:407.5px; padding:2px; background-color:red; color:black; font-size:11px; font-weight:bold;">I:1/1</div>
+	
+	<div id="mon" style="position:absolute;  left:8px; top:330px; background-color:#996600; width:20px; height:20px; border-radius:11px; "></div>
+	<div id="moff" style="position:absolute; left:8px; top:362.5px; background-color:#FFFF00; width:20px; height:20px; border-radius:11px; "></div>
+	<div id="dt" style="position:absolute; left:8px; top:396px; background-color:#996600; width:20px; height:20px; border-radius:11px; "></div>
+	
+	<p style="position:absolute; left:724px; top:88px; font-size:11px; font-weight:bold;">EN</p>
+	<p style="position:absolute; left:725.5px; top:130px; font-size:11px; font-weight:bold;">DN</p>
+	<p style="position:absolute; left:725.5px; top:420px; font-size:11px; font-weight:bold;">RES</p>
+	<p id="accum" style="position:absolute; left:657.5px; top:134.5px; font-size:14.5px;">0</p>
+</div>
+
+<div id="copyright"> &copy; 2020 - <script>document.write(new Date().getFullYear())</script> SOLVE - The Virtual Lab @ NITK Surathkal</div>
+
+</div>
+<script src="../assets/js/iframeResize.js"></script></body>
+</html>
