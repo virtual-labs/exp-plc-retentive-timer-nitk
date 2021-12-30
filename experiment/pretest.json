@@ -2,38 +2,83 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "A timer element is made up of ___ 16 bit words. ",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "One",
+        "b": "Two",
+        "c": "Three",
+        "d": "Four"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
       },
       "correctAnswer": "c",
-      "difficulty": "beginner"
+      "difficulty": ""
+    },
+    {
+      "question": "In timer element, word zero is for _______.",
+      "answers": {
+        "a": "Preset value",
+        "b": "Accumulated value",
+        "c": "Status bits"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": ""
+    },
+    {
+      "question": "In word zero, of timer element, bit 14, is the _______.",
+      "answers": {
+        "a": "Timer-timing bit",
+        "b": "Timer-enable bit",
+        "c": "Timer-done bit"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": ""
+    },
+    {
+      "question": "The retentive timer will retain its accumulated value during the following conditions:",
+      "answers": {
+        "a": "When its rung goes false",
+        "b": "When processor losses power",
+        "c": "When the processor operating mode is changed from remote run or remote test to remote program mode",
+        "d": "Timer-enable bit",
+        "e": "All of the above"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correctAnswer": "e",
+      "difficulty": ""
+    },
+    {
+      "question": "Only one timer address is allowed per reset instruction.",
+      "answers": {
+        "a": "True",
+        "b": "False"
+      },
+      "explanations": {
+        "a": "",
+        "b": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": ""
     }
   ]
 }
